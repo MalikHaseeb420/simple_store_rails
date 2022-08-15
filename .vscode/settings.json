@@ -1,7 +1,5 @@
 {
-  "files.associations": {
-    "*.html.erb": "html"
-  },
+
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },

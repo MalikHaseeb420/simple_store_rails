@@ -1,15 +1,11 @@
-<h1>All products</h1>
-<div class="products">
-  <% @products.each do |product|%>
-    <h2>
-      <%= product.name%>
-    </h2>
-    <p>
-      <%= product.description%>
-    </p>
-    <p><strong>
-        <%= number_to_currency(product.price, unit: "Rs" )%>
-      </strong></p>
-    <%= link_to 'Show Details' , product_path(product) %>
-      <%end%>
+<div class="row">
+<div class="col-10 mx-auto">
+<h1 class="text-danger">All products</h1>
+
+
+
+<%= render partial: "product", collection: @products %>
+
+
+
 </div>
