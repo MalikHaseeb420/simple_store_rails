@@ -10,5 +10,6 @@
     <p><strong>
         <%= number_to_currency(product.price, unit: "Rs" )%>
       </strong></p>
-    <%end%>
+    <%= link_to 'Show Details' , product_path(product) %>
+      <%end%>
 </div>
