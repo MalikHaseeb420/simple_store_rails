@@ -1,2 +1,13 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<div class="row bg-white">
+<div class="col-10 mx-auto">
+  <h1 class="text-center mb-3">
+    Category Deatails
+  </h1 >
+  <h1 class="text-center text-muted">
+    <%= @category.name%>
+  </h1>
+  <%= link_to 'Edit', edit_category_path, class: 'btn btn-info' %>
+  <%= link_to 'Delete', edit_category_path, class: 'btn btn-danger' %>
+</div>
+
+</div>

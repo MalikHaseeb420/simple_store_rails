@@ -4,7 +4,9 @@
 <p>
   <%= @product.description%>
 </p>
-<p><strong>
+<p>
+<strong>
     <%= number_to_currency(@product.price, unit: "Rs" ) %>
-  </strong></p>
+</strong>
+</p>
 <%=link_to 'Back' , products_path%>

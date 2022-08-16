@@ -1,0 +1,18 @@
+
+<table class="table">
+  <%= render 'shared/table_header', table_headers: table_headers %>
+
+            <tbody>
+              <% categories.each do |category| %>
+               <tr>
+                <th scope="row"><%= category.id%></th>
+                <td><%= category.name%></td>
+                <td>
+                  <%= link_to 'Details', category, class: 'btn btn-info'  %>
+                  <%= link_to 'Edit', edit_category_path(category), class: 'btn btn-secondary'  %>
+                  <%= link_to 'Delete', category, class: 'btn btn-danger'  %>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>

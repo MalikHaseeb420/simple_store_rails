@@ -1,8 +1,8 @@
 <div class="row">
 <div class="col-10 mx-auto">
-<h1 class="text-danger">All products</h1>
+<%= paginate @products %>
 
-
+<%= render 'shared/content_header',header: 'Products' %>
 
 <%= render partial: "product", collection: @products %>
 

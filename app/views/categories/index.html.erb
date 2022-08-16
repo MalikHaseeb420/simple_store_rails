@@ -1,27 +1,8 @@
 <div class="row py-5">
-  <div class="content-page-header col-12 py-3 pb-5">
-    <h2 class="text-center font-weight-bold">Product Categories</h2>
-    <%=link_to 'Add New Category', new_category_path, class:'btn btn-success d-block col-3 ml-auto' %>
-  </div>
+
+  <%= render 'shared/content_header',  header: 'Product Categories'  %>
   <div class="col-12">
-    <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Category Name</th>
-                <th scope="col">Category Id</th></th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @categories.each do |category| %>
-               <tr>
-                <th scope="row"><%= category.id%></th>
-                <td><%= category.name%></td>
-                <td></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
+    <%= render 'shared/content_table', table_headers: ['id','name', 'actions'], categories: @categories %>
   </div>
 
 </div>
